@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+}
+
+.leftSection{
+    background: url(./images/bg-main-desktop.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 35vw;
+    color: white;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: space-evenly;
+    margin-left: 40%;
+    height: 100vh;
+}
+
+.cardFront{
+    background: url(./images/bg-card-front.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    width: 65vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.nameSection{
+    display: flex;
+    justify-content: space-between;
+}
+.cardFront h2{
+    text-align: center;
+    letter-spacing: 5px;
+}
+.cardBack{
+    background: url(./images/bg-card-back.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    width: 65vh;
+    margin-left: 25%;
+    padding: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cardBack h3{
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+.error{
+    color: red;
+    font-style: italic;
+}
+
+.rightSection{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    align-items:center;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+.nameinput,.numberinput,.expDateinput,.cvcInput{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.bottomData{
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+label{
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:  hsl(278, 68%, 11%);
+    text-transform: uppercase;
+}
+::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: hsl(279, 6%, 55%);
+}
+input{
+    font-family:'Space Grotesk', sans-serif;
+    color: hsl(278, 68%, 11%);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid hsl(279, 6%, 55%);
+    
+}
+input:hover{
+    border: none;
+    outline: 2px solid hsl(278, 68%, 11%);
+}
+.eNum{
+    width: 30%;
+    margin-right: 20px;
+    text-align: center;
+}
+button{
+    font-family: 'Space Grotesk', sans-serif;
+    width: 70%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+}
+.AfterSection{
+    display: none;
+}
+.thanks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.thanks img{
+    width: 30%;
+}
+.thanks button{
+    width: 100%;
+}
+
+footer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    background-color: hsl(278, 68%, 11%);
+}
+
+/* responsive */
+
+@media (max-width:408px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftSection{
+        width: 100vw;
+        height: 45vh;
+    }
+    .cards{
+        margin: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 40%;
+    }
+    .cardFront, .cardBack{
+        border-radius: 10px;
+        width: 85vw;
+        height: 35vh;
+        font-size: 13px;
+    }
+    .cardFront{
+        margin-left: -10%;
+        z-index: 1;
+    }
+    .cardBack{
+        margin-left: 5%;
+        margin-top: -105%;
+        z-index: 0;
+    }
+    .cardFront h2{
+        font-size: 12px;
+    }
+
+    .rightSection{
+        margin-left: 0%;
+        width: 100vw;
+        margin-top: 30%;
+    }
+    .nameinput,.numberinput{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+    }
+    .bottomData{
+        display: flex;
+        width: 85%;
+        align-items: center;
+    }
+    .bottomData label{
+        font-size: 13px;
+        letter-spacing: 0px;
+    }
+    .expDateinput, .cvcInput{
+        width: 50%;
+    }
+    .eNum{
+        width: 40%;
+        margin-right: 10px;
+        text-align: center;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+    button{
+        width: 85% ;
+    }
+    .error{
+        font-size: 14px;
+    }
+    footer{
+        text-align: center;
+        font-size: 14px;
+    }
+}
