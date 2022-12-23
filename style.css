@@ -148,6 +148,9 @@ button{
 .thanks img{
     width: 30%;
 }
+h1{
+    display: block;
+}
 .thanks button{
     width: 100%;
 }
